@@ -4,6 +4,8 @@
     <color name="green_1">#9C27B0</color>
     <color name="green_2">#3F51B5</color>
     <color name="purple_700">#50B0FA</color>
+    <color name="purple_200">#009688</color>
+    <color name="purple_500">#009688</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#9C27B0</color>
     <color name="black">#F8D0D0</color>
