@@ -49,9 +49,9 @@ class MainActivity : AppCompatActivity() {
             rcvLista.layoutManager = LinearLayoutManager(this@MainActivity)
             rcvLista.adapter = ProductoAdapter(
                 listaProd,
-                { producto -> selecProduct(producto) },
-                { position -> deleteProduct(position) },
-                { position -> actuProduct(position) }
+                { producto -> selectProducto(producto) },
+                { position -> deleteProducto(position) },
+                { position -> actProducto(position) }
             )
         }
 
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
-    private fun actuProduct(position: Int) {
+    private fun actProducto(position: Int) {
         with(binding) {
 
             val id: Int = etID.text.toString().toInt()
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun selecProduct(producto: Producto) {
+    private fun selectProducto(producto: Producto) {
         with(binding) {
 
             etID.text = producto.id.toString().toEditable()
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun deleteProduct(position: Int) {
+    fun deleteProducto(position: Int) {
         val builder = AlertDialog.Builder(this@MainActivity)
         builder.setMessage("¿Fue un error o verdaderamente lo quieres eliminar?")
             .setCancelable(false)
